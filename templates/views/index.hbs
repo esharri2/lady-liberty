@@ -1,9 +1,10 @@
 <div class="index">
     <h1>Lorem Ipsum Productions</h1>
+    <img src="./media/fire.jpg"/>
     <nav>
         {{# each navLinks}}
         <div {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
-            <a href="{{ href }}">{{ label }}</a>
+            <a class="link" href="{{ href }}">{{ label }}</a>
         </div>
         {{/each}}
     </nav>

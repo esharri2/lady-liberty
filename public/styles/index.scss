@@ -1,33 +1,84 @@
 @import './reset';
-
 $background: #89817C;
+$backgroundRGB: rgba(137, 129, 124, 0.45);
 $white: #f9f8f8;
-
+$title-font: 'Work Sans',
+sans-serif;
 
 body {
-    background-color:$background;
+    background-color: $background;    
     color: $white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $title-font;
 }
 
 .index {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    height:100vh;
+    position:relative;
+  
+    img {
+        filter:grayscale(1) opacity(.1);
+        // filter:opacity(.2);
+
+        width:auto;        
+        height:80vh;
+        position:absolute;
+        z-index:-1;
+    }
+    // background:  linear-gradient(
+    //     rgba(137, 129, 124, 0.7), 
+    //     rgba(137, 129, 124, 0.9)
+    //   ),url('../media/fire.jpg');
+    // background-origin:border-box;
+    // background-size: 350px;
+    // background-repeat: no-repeat;
+    // background-position: center; 
+    // filter:gray;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    h1{
+        animation:fadeIn 1s 1;
+        font-size: calc(20px + 2.5vw);
+        padding:0 5px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        div {
+            box-sizing: border-box;
+        }
+        .link {
+            box-sizing:border-box;
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 200;
+            margin: 0 10px;
+            padding: 5px;
+            animation:fadeIn 1s 1;
+
+        }
+        .link:hover {
+            border-bottom: 0.5px solid $white;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0%   {color: $background; margin-bottom:-20px}
+    100% {top: $white;}
 }
 
 h1 {
-    color:blue;
-}
-
-nav {
-    display:flex;
-    justify-content:space-between;
-    .active {
-        color:red;
-    }
+    text-transform: uppercase;
+    // font-size: 50px;
+    font-weight: 100;
+    text-align: center;
 }
