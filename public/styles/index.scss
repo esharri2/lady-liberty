@@ -1,0 +1,33 @@
+@import './reset';
+
+$background: #89817C;
+$white: #f9f8f8;
+
+
+body {
+    background-color:$background;
+    color: $white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.index {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    height:100vh;
+}
+
+h1 {
+    color:blue;
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    .active {
+        color:red;
+    }
+}

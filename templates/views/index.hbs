@@ -1,0 +1,10 @@
+<div class="index">
+    <h1>Lorem Ipsum Productions</h1>
+    <nav>
+        {{# each navLinks}}
+        <div {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
+            <a href="{{ href }}">{{ label }}</a>
+        </div>
+        {{/each}}
+    </nav>
+</div>
