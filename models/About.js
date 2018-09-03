@@ -10,10 +10,11 @@ var Types = keystone.Field.Types;
 var About = new keystone.List('About',
 	{
 		nocreate: true,
-		nodelete: false,
+		nodelete: true,
 		label: "About",
 		path: "about",
-		sortable:false
+		sortable:false,
+		map: { name: 'title' }
 	});
 
 About.track = {
@@ -22,8 +23,8 @@ About.track = {
 }
 
 About.add({
-	title:
-	content: { type: Types.Html, wysiwyg: true },
+	title: { type: String, initial:true },
+	content:{ type: Types.Html, wysiwyg: true },
 });
 
 About.register();

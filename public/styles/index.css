@@ -133,6 +133,36 @@ nav.navbar {
       height: 4em;
       background-image: linear-gradient(rgba(137, 129, 124, 0) 0%, #89817c 100%); }
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: center; }
+
+.contact {
+  border: solid 0.5px #f9f8f8;
+  color: #f9f8f8;
+  margin: 10px;
+  min-width: 300px;
+  color: #f9f8f8; }
+  .contact a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    transition: all .1s; }
+  .contact a:hover, .contact a:focus {
+    background: #aea9a5; }
+  .contact i {
+    color: #f9f8f8; }
+  .contact .iconLabel {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f9f8f8;
+    font-family: "Work Sans", sans-serif;
+    display: inline;
+    margin-left: 10px; }
+
 .index nav.homepage .link:hover, nav.navbar .active, nav.navbar .links .link:hover {
   border-bottom: 0.5px solid #f9f8f8; }
 

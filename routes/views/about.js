@@ -12,6 +12,7 @@ module.exports = function (req, res) {
     view.on('init', function (next) {
         var q = About.model.find();
         q.exec(function(err, results){
+            console.log(results);
             locals.about = results[0].content;
             next(err);
         })

@@ -11,9 +11,9 @@ var Contact = new keystone.List('Contact', {
 Contact.add({
 	showPlatformAs: { type: String, required: true, initial:true},
 	platform: { type: Types.Select, options: 'email, facebook, instagram, twitter, other', default: 'other', index: true, initial:true },
-	address: { type: Types.Url, required: true, initial:true}
+	address: { type: String, required: true, initial:true}
 });
 
 //I think this defines what shows in the adminUI
-Contact.defaultColumns = 'showPlatformAs';
+Contact.defaultColumns = 'showPlatformAs, address';
 Contact.register();

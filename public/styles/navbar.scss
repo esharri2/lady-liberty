@@ -11,7 +11,7 @@ nav.navbar {
     z-index:100;
     a {
         text-decoration: none;
-        color: $white;
+        color: $bg-contrast-1;
     }
     .active {
         @extend %link-hover;
