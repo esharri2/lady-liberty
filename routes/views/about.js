@@ -5,18 +5,17 @@ module.exports = function (req, res) {
 
     var view = new keystone.View(req, res);
     var locals = res.locals;
-    locals.name="Evan";
-
-    var User = keystone.list('User');
+    locals.section = 'about';
+ 
+    var About = keystone.list('About');
 
     view.on('init', function (next) {
-        var q = User.model.find();
+        var q = About.model.find();
         q.exec(function(err, results){
-            console.log(results);
-            locals.users = results[0];
+            locals.about = results[0].content;
             next(err);
         })
       })
 
-    view.render('contact');
+    view.render('about');
   };

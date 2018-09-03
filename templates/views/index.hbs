@@ -1,7 +1,7 @@
 <div class="index">
-    <h1>Lorem Ipsum Productions</h1>
+    <h1>{{companyName}}</h1>
     <img src="./media/fire.jpg"/>
-    <nav>
+    <nav class="homepage">
         {{# each navLinks}}
         <div {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
             <a class="link" href="{{ href }}">{{ label }}</a>

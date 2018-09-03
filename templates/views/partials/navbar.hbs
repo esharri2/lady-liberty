@@ -1,0 +1,11 @@
+<nav class="navbar">
+    <div class="logo"><a href="/">{{companyName}}</a></div>
+    <div class="links">
+        {{# each navLinks}}
+        <div>
+            <a {{#ifeq ../section key}}class="active link" {{else}}class="link"{{/ifeq}} href="{{ href }}">{{ label }}</a>
+        </div>
+        {{/each}}
+    </div>
+
+</nav>

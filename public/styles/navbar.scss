@@ -1,0 +1,37 @@
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $nav-height;    
+    background-color:inherit;
+    z-index:100;
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+    .active {
+        @extend %link-hover;
+
+    }
+    .logo {
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 2px 5px;
+        margin-left:5px;
+    }
+    .links {
+        margin-right:10px;
+        display: flex;
+        .link {
+            padding: 2px 5px;
+            text-transform: uppercase;
+        }
+        .link:hover {
+            @extend %link-hover;
+        }
+    }
+}

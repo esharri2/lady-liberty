@@ -13,5 +13,6 @@ var routes = {
 //Setup route bindings
 exports = module.exports = function (app) {
   app.get('/', routes.views.index);
-	app.get('/contact', routes.views.contact);
+  app.get('/news', routes.views.news);
+  app.get('/about', routes.views.about);
 };

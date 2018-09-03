@@ -1,6 +1,8 @@
 var keystone = require('keystone');
 
-var User = new keystone.List('User');
+var User = new keystone.List('User', {
+    map: { name: 'email' }
+});
 
 //Learn more about field types here:
 //https://keystonejs.com/api/field/
