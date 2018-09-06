@@ -12,9 +12,7 @@ Post.add({
 	content: { type: Types.Html, wysiwyg: true}
 });
 
-// Post.schema.virtual('content.full').get(function () {
-// 	return this.content.extended || this.content.brief;
-// });
+
 
 //I think this defines what shows in the adminUI
 Post.defaultColumns = 'title, state, publishedDate';

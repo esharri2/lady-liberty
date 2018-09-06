@@ -16,13 +16,12 @@
         display: block;
         padding: 20px;
         text-decoration: none;
-        transition:all .1s;
+        transition: all .1s;
     }
-
-    a:hover, a:focus {
-        background:$background-light;
+    a:hover,
+    a:focus {
+        background: $background-light;
     }
-
     i {
         color: $bg-contrast-1;
     }

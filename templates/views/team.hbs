@@ -1,0 +1,14 @@
+ {{>navbar }}
+
+<div class="container team">
+    {{!-- test to see if no team --}} {{#each team}}
+    <div class="person">
+        <div class="nameplate">
+            <h1>{{name}}</h1>
+            <div class="role">{{role}}</div>
+        </div>
+        <img src={{image.url}}>
+        <div class="description">{{{description}}}</div>
+    </div>
+    {{/each}}
+</div>

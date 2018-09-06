@@ -111,8 +111,6 @@ nav.navbar {
       text-transform: uppercase; }
 
 .news h1 {
-  font-size: 20px;
-  font-weight: 300;
   margin: 10px 0; }
 
 .news .timestamp {
@@ -151,7 +149,8 @@ nav.navbar {
     padding: 20px;
     text-decoration: none;
     transition: all .1s; }
-  .contact a:hover, .contact a:focus {
+  .contact a:hover,
+  .contact a:focus {
     background: #aea9a5; }
   .contact i {
     color: #f9f8f8; }
@@ -162,6 +161,17 @@ nav.navbar {
     font-family: "Work Sans", sans-serif;
     display: inline;
     margin-left: 10px; }
+
+.team .person {
+  margin: 30px 0; }
+  .team .person h1 {
+    padding: 5px 0; }
+  .team .person img {
+    width: 150px; }
+
+.team .role {
+  font-weight: 200;
+  text-transform: uppercase; }
 
 .index nav.homepage .link:hover, nav.navbar .active, nav.navbar .links .link:hover {
   border-bottom: 0.5px solid #f9f8f8; }
@@ -190,6 +200,10 @@ button:focus, button:hover {
   background: #aea9a5;
   outline: none; }
 
+h1 {
+  font-size: 20px;
+  font-weight: 300; }
+
 ul,
 ol,
 p {
@@ -197,7 +211,8 @@ p {
 
 p {
   line-height: 1.1;
-  margin: 10px 0; }
+  margin: 10px 0;
+  font-family: "Open Sans", Arial, sans-serif; }
 
 ul {
   display: block;

@@ -24,6 +24,7 @@ body {
 @import './navbar';
 @import './news';
 @import './contact';
+@import './team';
 
 
 %link-hover {
@@ -63,6 +64,11 @@ button:focus, button:hover {
     outline:none;
 }
 
+h1 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
 ul,
 ol,
 p {
@@ -72,6 +78,7 @@ p {
 p {
     line-height: 1.1;
     margin: 10px 0;
+    font-family: $body-font;
 }
 
 ul {

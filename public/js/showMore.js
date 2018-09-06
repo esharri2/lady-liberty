@@ -17,14 +17,11 @@ function toggleFadeOutDiv(content, displayText){
    content.style.display = displayText;
 }
 
-
 document.querySelectorAll(".content").forEach(content => {
     content.style.maxHeight = `${maxContentHeight}px`;
     if (content.scrollHeight > maxContentHeight) {
         addButton(content);
         toggleFadeOutDiv(content.querySelector(".fadeOut"), "block");
-
-        // addFadeOutDiv(content);        
     }
 })
 

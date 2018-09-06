@@ -24,6 +24,7 @@ keystone.init({
         helpers: new require('./templates/views/helpers')(),
         extname: '.hbs',
     }).engine,
+    'cloudinary config': process.env.CLOUDINARY_URL
 });
 
 
