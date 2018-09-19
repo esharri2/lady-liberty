@@ -7,9 +7,9 @@ console.log(process.env.KEYSTONESECRET);
 //Read about more options here:
 //https://keystonejs.com/documentation/configuration/
 keystone.init({
-    //   'cookie secret': process.env.KEYSTONESECRET,
-    'cookie secret': "test",
-    'name': 'prodco',
+    'cookie secret': process.env.KEYSTONESECRET,
+    // 'cookie secret': "test",
+    'name': 'ladyliberty',
     'sass': 'public',
 	'static': 'public',
     'user model': 'User',
