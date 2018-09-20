@@ -1,11 +1,8 @@
-<div class="index">
+ {{>navbar }}
+
+<div class="splash">
     <h1>{{companyName}}</h1>
-    <img src="./media/fire.jpg"/>
-    <nav class="homepage">
-        {{# each navLinks}}
-        <div {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
-            <a class="link" href="{{ href }}">{{ label }}</a>
-        </div>
-        {{/each}}
-    </nav>
+    <p class="subtitle">A film by Kerri Quinn</p>
+    <img src="./media/ll_still_1.jpg"/> 
+    <a class="link-button" href="https://www.google.com">Watch trailer</a>
 </div>

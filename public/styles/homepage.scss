@@ -1,52 +1,52 @@
-.index {
-    position: relative;
-    img {
-        filter: grayscale(1) opacity(.1);
-        width: auto;
-        height: 80vh;
-        position: absolute;
-        z-index: -1;
-    } // background:  linear-gradient(
-    //     rgba(137, 129, 124, 0.7), 
-    //     rgba(137, 129, 124, 0.9)
-    //   ),url('../media/fire.jpg');
-    // background-origin:border-box;
-    // background-size: 350px;
-    // background-repeat: no-repeat;
-    // background-position: center; 
-    // filter:gray;
+.splash {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
     h1 {
-        animation: fadeIn 1s 1;
-        font-size: calc(20px + 2.5vw);
+        animation: slideIn 2s 1;
+        font-size: calc(40px + 3.5vw);
         padding: 0 5px;
-        text-transform: uppercase; // font-size: 50px;
-        font-weight: 100;
+        font-weight: 300;
         text-align: center;
+        color: $bg-contrast-1;
+        font-family: $title-font;
+        position: relative;
     }
-    nav.homepage {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 0;
-        div {
-            box-sizing: border-box;
-        }
-        .link {
-            box-sizing: border-box;
-            text-decoration: none;
-            color: $bg-contrast-1;
-            text-transform: uppercase;
-            font-weight: 200;
-            margin: 0 10px;
-            padding: 5px;
-            animation: fadeIn 1s 1;
-        }
-        .link:hover {
-            @extend %link-hover;
-        }
+    .subtitle {
+        font-family: $title-font;
+        animation: fadeIn 2s 1;
+        font-size: 20px;
+        font-style: italic;
+        margin-top: 15px;
+    }
+    img {
+        filter: grayscale(0) opacity(.4);
+        width: 100vw;
+        min-width:650px;
+        // min-width: auto;
+        position: absolute;
+        z-index: -1;
+        animation: fadeIn 4s 1;
+    }
+    img::after {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+    }
+    .link-button {
+        margin: 30px;
+        padding: 10px;
+        border: solid 1px $bg-contrast-1;
+        font-family: $body-font;
+        text-transform: uppercase;
+        transition: all .5s;
+        animation: fadeIn 4s 1;
+    }
+    .link-button:hover {
+        color: $background;
+        background: $bg-contrast-1;
     }
 }

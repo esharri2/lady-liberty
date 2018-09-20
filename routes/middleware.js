@@ -6,7 +6,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Team', key: 'team', href: '/team' },
 		{ label: 'Events', key: 'event', href: '/events' },
 	];
-	res.locals.companyName = "Lorem Ipsum Productions"
+	res.locals.companyName = "Lady Liberty"
 	res.locals.user = req.user;
 	next();
 };

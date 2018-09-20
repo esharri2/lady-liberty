@@ -1,12 +1,13 @@
 @import './reset';
 //COLORS
-$background: #89817C;
+$background: #f4f4f4;
 $background-light: #aea9a5;
-$bg-contrast-1: #f9f8f8;
+$bg-contrast-1: #373737;
+$bg-contrast-2: #858585;
 //FONTS
-$title-font: 'Work Sans',
-sans-serif;
-$body-font: 'Open Sans',
+$title-font: 'Crimson Text',
+serif;
+$body-font: 'Work Sans',
 Arial,
 sans-serif;
 //SIZES
@@ -17,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $title-font;
+    font-family: $body-font;
 }
 
 @import './homepage';
@@ -28,16 +29,30 @@ body {
 
 
 %link-hover {
-    border-bottom: 0.5px solid $bg-contrast-1;
+    color: $bg-contrast-2;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+       top: -20px
+    }
+    100% {
+        opacity:1;
+        top: 0px
+
+    }
 }
 
 @keyframes fadeIn {
     0% {
-        color: $background;
-        margin-bottom: -20px
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
     }
     100% {
-        top: $bg-contrast-1;
+        opacity:1;
     }
 }
 
@@ -56,7 +71,11 @@ button {
     padding:8px;
     margin-top: 10px;
     transition:all .1s;
+}
 
+a {
+    text-decoration:none;
+    color:$bg-contrast-1;
 }
 
 button:focus, button:hover {

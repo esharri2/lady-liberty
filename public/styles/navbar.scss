@@ -4,7 +4,7 @@ nav.navbar {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: $nav-height;    
     background-color:inherit;
@@ -15,19 +15,12 @@ nav.navbar {
     }
     .active {
         @extend %link-hover;
-
-    }
-    .logo {
-        text-transform: uppercase;
-        font-size: 20px;
-        padding: 2px 5px;
-        margin-left:5px;
-    }
+    } 
     .links {
         margin-right:10px;
         display: flex;
         .link {
-            padding: 2px 5px;
+            padding: 2px 10px;
             text-transform: uppercase;
         }
         .link:hover {
