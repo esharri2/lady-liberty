@@ -6,6 +6,8 @@ $bg-contrast-1: #373737;
 $bg-contrast-2: #858585;
 //FONTS
 $title-font: 'Crimson Text',
+// $title-font: 'Playfair Dislay',
+
 serif;
 $body-font: 'Work Sans',
 Arial,
@@ -23,7 +25,6 @@ body {
 
 @import './homepage';
 @import './navbar';
-@import './news';
 @import './contact';
 @import './team';
 
@@ -59,9 +60,15 @@ body {
 //Global styles
 
 .container {
-    margin: $nav-height *2 auto 0 auto;
+    margin: $nav-height *3 auto 0 auto;
     max-width: 600px;
     padding:0 10px;
+    h1 {
+        font-family:$title-font;
+        text-align:center;
+        font-size:40px;
+        margin-bottom:40px;
+    }
 }
 
 button {
@@ -90,14 +97,14 @@ h1 {
 
 ul,
 ol,
-p {
+{
     font-family: $body-font;
 }
 
 p {
     line-height: 1.1;
     margin: 10px 0;
-    font-family: $body-font;
+    font-family: $title-font;
 }
 
 ul {

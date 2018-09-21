@@ -12,11 +12,11 @@ module.exports = function (req, res) {
     var Person = keystone.list('Person');
 
     view.on('init', function (next) {
-        //This gets all Persons; in future may want to implement pagination
-        var q = Person.model.find();
+        var q = Person.model.find().populate('category');
         q.exec(function (err, results) {
+            const categories = results.map(person => person.category.name);
+            locals.categories = categories;
             locals.team = results;
-            console.log(results);
             next(err);
         })
     })
