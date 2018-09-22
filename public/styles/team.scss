@@ -1,22 +1,25 @@
 .team {
+    img {
+        width: 100%;
+        margin-top:20px;
+    }
     h2 {
         font-size: 25px;
         font-family: $title-font;
-        margin: 20px 0;
+        margin: 60px 0 20px 0;
     }
     .wrapper {
         display: grid;
-        grid-template-columns: 300px 300px;
+        grid-template-columns: 50% 50%;
         grid-gap: 10px;
     }
     .team-list {
-        text-align: right;
+        // text-align: center;
     }
-    .photos {
-        img {
-            width: 200px;
-        }
+    h2:nth-child(1) {
+        margin-top:0
     }
+
     .person {
         padding: 5px 0;
     }

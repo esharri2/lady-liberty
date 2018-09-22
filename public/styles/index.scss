@@ -6,9 +6,6 @@ $bg-contrast-1: #373737;
 $bg-contrast-2: #858585;
 //FONTS
 $title-font: 'Crimson Text',
-// $title-font: 'Playfair Dislay',
-// $title-font: 'EB Garamond',
-
 serif;
 $body-font: 'Work Sans',
 Arial,
@@ -29,7 +26,7 @@ body {
 @import './contact';
 @import './team';
 @import './about';
-
+@import './video';
 
 %link-hover {
     color: $bg-contrast-2;
@@ -38,12 +35,11 @@ body {
 @keyframes slideIn {
     0% {
         opacity: 0;
-       top: -20px
+        top: -20px
     }
     100% {
-        opacity:1;
+        opacity: 1;
         top: 0px
-
     }
 }
 
@@ -55,54 +51,51 @@ body {
         opacity: 0;
     }
     100% {
-        opacity:1;
+        opacity: 1;
     }
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
-    } 
+    }
     100% {
-        opacity:1;
+        opacity: 1;
     }
 }
 
-
-
 //Global styles
-
 .container {
     margin: $nav-height *3 auto 0 auto;
     max-width: 600px;
-    padding:0 10px;
-    animation:fadeIn 1s 1;
+    padding: 0 10px;
+    animation: fadeIn 1s 1;
     h1 {
-        font-family:$title-font;
-        text-align:center;
-        font-size:40px;
-        margin-bottom:40px;
-    }    
+        font-family: $title-font;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
 }
 
 button {
     border: solid .5px $bg-contrast-1;
-    background:transparent;
-    color:$bg-contrast-1;
-    padding:8px;
+    background: transparent;
+    color: $bg-contrast-1;
+    padding: 8px;
     margin-top: 10px;
-    transition:all .1s;
+    transition: all .1s;
 }
 
 a {
-    text-decoration:none;
-    color:$bg-contrast-1;
+    text-decoration: none;
+    color: $bg-contrast-1;
 }
 
-
-button:focus, button:hover {
-    background:$background-light;
-    outline:none;
+button:focus,
+button:hover {
+    background: $background-light;
+    outline: none;
 }
 
 h1 {
@@ -112,7 +105,7 @@ h1 {
 
 ul,
 ol,
-{
+    {
     font-family: $body-font;
 }
 
@@ -141,4 +134,3 @@ ol {
     margin-right: 0;
     padding-left: 40px;
 }
-
