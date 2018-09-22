@@ -1,7 +1,35 @@
- {{>navbar }}
+{{>navbar }}
 
 <div class="container team">
-    {{!-- test to see if no team --}} {{#each categories}}
- {{this}}
-    {{/each}}
+    <h1>Team</h1>
+    <div class="wrapper">
+        <section class="team-list">
+            {{#each everyone}}
+            <h2>{{this.label}}</h2>
+            <ul>
+                {{#each this.team}}
+                <li class="person">
+                    <ul>
+                        {{#if link}}
+                        <li class="name"><a href="{{link}}">{{name}}</a></li>
+                        {{else}}
+                        <li class="name">{{name}}</li>
+                        {{/if}}
+                        {{#if role}}
+                        {{/if}}
+                        <li class="role">{{role}}</li>
+                    </ul>
+                </li>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </section>
+        <section class="photos">
+            <img src="./media/ll_still_1.jpg" />
+            <img src="./media/ll_still_1.jpg" />
+            <img src="./media/ll_still_1.jpg" />
+            <img src="./media/ll_still_1.jpg" />
+        </section>
+    </div>
+</div>
 </div>

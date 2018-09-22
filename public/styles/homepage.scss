@@ -19,7 +19,7 @@
     }
     .subtitle {
         font-family: $title-font;
-        animation: fadeIn 2s 1;
+        animation: rampFadeIn 2s 1;
         font-size: 20px;
         font-style: italic;
         margin-top: 15px;
@@ -31,7 +31,7 @@
         // min-width: auto;
         position: absolute;
         z-index: -1;
-        animation: fadeIn 4s 1;
+        animation: rampFadeIn 4s 1;
     }
     img::after {
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
@@ -43,7 +43,7 @@
         font-family: $body-font;
         text-transform: uppercase;
         transition: all .5s;
-        animation: fadeIn 4s 1;
+        animation: rampFadeIn 4s 1;
     }
     .link-button:hover {
         color: $background;

@@ -7,6 +7,7 @@ $bg-contrast-2: #858585;
 //FONTS
 $title-font: 'Crimson Text',
 // $title-font: 'Playfair Dislay',
+// $title-font: 'EB Garamond',
 
 serif;
 $body-font: 'Work Sans',
@@ -27,6 +28,7 @@ body {
 @import './navbar';
 @import './contact';
 @import './team';
+@import './about';
 
 
 %link-hover {
@@ -45,7 +47,7 @@ body {
     }
 }
 
-@keyframes fadeIn {
+@keyframes rampFadeIn {
     0% {
         opacity: 0;
     }
@@ -57,18 +59,30 @@ body {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity:1;
+    }
+}
+
+
+
 //Global styles
 
 .container {
     margin: $nav-height *3 auto 0 auto;
     max-width: 600px;
     padding:0 10px;
+    animation:fadeIn 1s 1;
     h1 {
         font-family:$title-font;
         text-align:center;
         font-size:40px;
         margin-bottom:40px;
-    }
+    }    
 }
 
 button {
@@ -84,6 +98,7 @@ a {
     text-decoration:none;
     color:$bg-contrast-1;
 }
+
 
 button:focus, button:hover {
     background:$background-light;

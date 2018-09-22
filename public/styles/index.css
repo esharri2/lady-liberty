@@ -68,7 +68,7 @@ body {
     position: relative; }
   .splash .subtitle {
     font-family: "Crimson Text", serif;
-    animation: fadeIn 2s 1;
+    animation: rampFadeIn 2s 1;
     font-size: 20px;
     font-style: italic;
     margin-top: 15px; }
@@ -78,7 +78,7 @@ body {
     min-width: 650px;
     position: absolute;
     z-index: -1;
-    animation: fadeIn 4s 1; }
+    animation: rampFadeIn 4s 1; }
   .splash img::after {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%); }
   .splash .link-button {
@@ -88,7 +88,7 @@ body {
     font-family: "Work Sans", Arial, sans-serif;
     text-transform: uppercase;
     transition: all .5s;
-    animation: fadeIn 4s 1; }
+    animation: rampFadeIn 4s 1; }
   .splash .link-button:hover {
     color: #f4f4f4;
     background: #373737; }
@@ -145,6 +145,47 @@ nav.navbar {
     display: inline;
     margin-left: 10px; }
 
+.team h2 {
+  font-size: 25px;
+  font-family: "Crimson Text", serif;
+  margin: 20px 0; }
+
+.team .wrapper {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-gap: 10px; }
+
+.team .team-list {
+  text-align: right; }
+
+.team .photos img {
+  width: 200px; }
+
+.team .person {
+  padding: 5px 0; }
+
+.team .name {
+  font-family: "Work Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 2px 0; }
+  .team .name a {
+    border-bottom: 0.5px solid #373737; }
+
+.team .role {
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  padding: 2px 0; }
+
+.team ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.team li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
 nav.navbar .active, nav.navbar .links .link:hover {
   color: #858585; }
 
@@ -156,7 +197,7 @@ nav.navbar .active, nav.navbar .links .link:hover {
     opacity: 1;
     top: 0px; } }
 
-@keyframes fadeIn {
+@keyframes rampFadeIn {
   0% {
     opacity: 0; }
   50% {
@@ -164,10 +205,17 @@ nav.navbar .active, nav.navbar .links .link:hover {
   100% {
     opacity: 1; } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .container {
   margin: 6em auto 0 auto;
   max-width: 600px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  animation: fadeIn 1s 1; }
   .container h1 {
     font-family: "Crimson Text", serif;
     text-align: center;

@@ -1,0 +1,47 @@
+.team {
+    h2 {
+        font-size: 25px;
+        font-family: $title-font;
+        margin: 20px 0;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 10px;
+    }
+    .team-list {
+        text-align: right;
+    }
+    .photos {
+        img {
+            width: 200px;
+        }
+    }
+    .person {
+        padding: 5px 0;
+    }
+    .name {
+        font-family: $body-font;
+        text-transform: uppercase;
+        padding: 2px 0;
+        a {
+            // text-decoration:underline;
+            border-bottom: 0.5px solid $bg-contrast-1;
+        }
+    }
+    .role {
+        font-family: $title-font;
+        font-style: italic;
+        padding: 2px 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+}

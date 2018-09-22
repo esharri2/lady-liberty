@@ -11,10 +11,9 @@ var Person = new keystone.List('Person', {
 
 Person.add({
     name: { type: String, required: true, initial:true },    
-    role: { type: String},
-    category:{ type: Types.Relationship, ref: 'TeamRoles', many: false },
-    link: { type: Types.Url }
-
+    role: { type: String, note:'Optional. The person\'s job or role/character they played.'},
+    category:{ type: Types.Relationship, ref: 'TeamRoles', many: false, required: true, initial:true},
+    link: { type: Types.Url, note:'Optional. You must include https:// at the start of the url.'}
     // description: { type: Types.Html, wysiwyg: true}
     // image:{ type: Types.CloudinaryImage }
 });
