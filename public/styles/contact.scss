@@ -1,36 +1,33 @@
 .contacts {
     display: flex;
     flex-direction: column;
-    min-height: 60vh;
-    align-items: center;
+    min-height: 60vh; // align-items: center;
     justify-content: center;
 }
 
 .contact {
-    border: solid .5px $bg-contrast-1;
+    margin-bottom: 30px;
     color: $bg-contrast-1;
-    margin: 10px;
-    min-width: 300px;
-    color: $bg-contrast-1;
+    font-size: 25px;    
     a {
         display: block;
-        padding: 20px;
         text-decoration: none;
         transition: all .1s;
     }
-    a:hover,
-    a:focus {
-        background: $background-light;
+    a:hover .iconLabel,
+    a:focus .iconLabel,
+    a:hover i,
+    a:focus i {
+        @extend %link-hover;
     }
     i {
         color: $bg-contrast-1;
     }
     .iconLabel {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $bg-contrast-1;
-        font-family: $title-font;
+        text-decoration: none; // text-transform: uppercase;
+        color: $bg-contrast-1; // font-family: $title-font;
         display: inline;
-        margin-left: 10px
+        margin-left: 10px;
+        text-transform: uppercase;
     }
 }

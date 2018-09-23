@@ -118,45 +118,37 @@ nav.navbar {
   display: flex;
   flex-direction: column;
   min-height: 60vh;
-  align-items: center;
   justify-content: center; }
 
 .contact {
-  border: solid 0.5px #373737;
+  margin-bottom: 30px;
   color: #373737;
-  margin: 10px;
-  min-width: 300px;
-  color: #373737; }
+  font-size: 25px; }
   .contact a {
     display: block;
-    padding: 20px;
     text-decoration: none;
     transition: all .1s; }
-  .contact a:hover,
-  .contact a:focus {
-    background: #aea9a5; }
   .contact i {
     color: #373737; }
   .contact .iconLabel {
     text-decoration: none;
-    text-transform: uppercase;
     color: #373737;
-    font-family: "Crimson Text", serif;
     display: inline;
-    margin-left: 10px; }
+    margin-left: 10px;
+    text-transform: uppercase; }
 
 .team img {
   width: 100%;
-  margin-top: 20px; }
+  margin-bottom: 20px; }
 
 .team h2 {
   font-size: 25px;
   font-family: "Crimson Text", serif;
-  margin: 60px 0 20px 0; }
+  margin: 40px 0 20px 0; }
 
 .team .wrapper {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 35% 65%;
   grid-gap: 10px; }
 
 .team h2:nth-child(1) {
@@ -205,6 +197,9 @@ nav.navbar {
   overflow: hidden;
   width: 60vw; }
 
+.videos .video-container:not(:first-child) {
+  margin-bottom: 25px; }
+
 .videos .video-container iframe,
 .videos .video-container object,
 .videos .video-container embed {
@@ -217,7 +212,10 @@ nav.navbar {
 .videos.container {
   max-width: none; }
 
-nav.navbar .active, nav.navbar .links .link:hover {
+nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
+.contact a:focus .iconLabel,
+.contact a:hover i,
+.contact a:focus i {
   color: #858585; }
 
 @keyframes slideIn {

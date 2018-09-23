@@ -9,9 +9,9 @@ var Contact = new keystone.List('Contact', {
 });
 
 Contact.add({
-	showPlatformAs: { type: String, required: true, initial:true},
-	platform: { type: Types.Select, options: 'email, facebook, instagram, twitter, other', default: 'other', index: true, initial:true },
-	address: { type: String, required: true, initial:true}
+    showPlatformAs: { type: String, required: true, initial: true, note: 'What the platform will display as for the user.' },
+    platform: { type: Types.Select, options: 'email, facebook, instagram, twitter, other', default: 'other', index: true, initial: true },
+    address: { type: String, required: true, initial: true, note: 'You must include https:// at the start of the url.' }
 });
 
 //I think this defines what shows in the adminUI

@@ -19,6 +19,10 @@
         overflow: hidden;
         width:60vw;
       }
+
+      .video-container:not(:first-child) {
+        margin-bottom:25px;
+      }
        
       .video-container iframe,
       .video-container object,
