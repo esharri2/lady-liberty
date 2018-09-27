@@ -41,8 +41,8 @@ table {
   border-spacing: 0; }
 
 body {
-  background-color: #f4f4f4;
-  color: #373737;
+  background-color: #53656F;
+  color: #C2C0BC;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@ body {
     padding: 0 5px;
     font-weight: 300;
     text-align: center;
-    color: #373737;
+    color: #C2C0BC;
     font-family: "Crimson Text", serif;
     position: relative; }
   .splash .subtitle {
@@ -87,14 +87,14 @@ body {
   .splash .link-button {
     margin: 30px;
     padding: 10px;
-    border: solid 1px #373737;
+    border: solid 1px #C2C0BC;
     font-family: "Work Sans", Arial, sans-serif;
     text-transform: uppercase;
     transition: all .5s;
     animation: rampFadeIn 4s 1; }
   .splash .link-button:hover {
-    color: #f4f4f4;
-    background: #373737; }
+    color: #53656F;
+    background: #C2C0BC; }
 
 nav.navbar {
   position: fixed;
@@ -109,19 +109,19 @@ nav.navbar {
   z-index: 10; }
   nav.navbar .hamburger {
     display: none;
-    color: #373737; }
+    color: #C2C0BC; }
   nav.navbar .hamburger:hover {
     cursor: pointer;
-    color: #858585; }
+    color: #999999; }
   nav.navbar ul {
     list-style-type: none;
     text-align: center;
     margin: 0; }
   nav.navbar a {
     text-decoration: none;
-    color: #373737; }
+    color: #C2C0BC; }
   nav.navbar .links {
-    display: flex; }
+    display: none; }
     nav.navbar .links .link {
       padding: 2px 12px;
       text-transform: uppercase; }
@@ -137,9 +137,9 @@ nav.navbar {
     top: 2em;
     padding: 0;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #53656F;
     width: 100vw;
-    border-bottom: 1px solid #858585;
+    border-bottom: 1px solid #999999;
     animation: fadeIn 0.3s 1; }
     nav.navbar .expanded li {
       display: block;
@@ -153,17 +153,17 @@ nav.navbar {
 
 .contact {
   margin-bottom: 30px;
-  color: #373737;
+  color: #C2C0BC;
   font-size: 25px; }
   .contact a {
     display: block;
     text-decoration: none;
     transition: all .1s; }
   .contact i {
-    color: #373737; }
+    color: #C2C0BC; }
   .contact .iconLabel {
     text-decoration: none;
-    color: #373737;
+    color: #C2C0BC;
     display: inline;
     margin-left: 10px;
     text-transform: uppercase; }
@@ -196,7 +196,7 @@ nav.navbar {
   text-transform: uppercase;
   padding: 2px 0; }
   .team .name a {
-    border-bottom: 0.5px solid #373737; }
+    border-bottom: 0.5px solid #C2C0BC; }
 
 .team .role {
   font-family: "Crimson Text", serif;
@@ -316,7 +316,7 @@ nav.navbar {
   position: absolute;
   top: 35px;
   right: 35px;
-  color: #f4f4f4;
+  color: #53656F;
   font-size: 40px;
   font-weight: 100;
   transition: 0.3s; }
@@ -335,7 +335,7 @@ nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
 .contact a:focus .iconLabel,
 .contact a:hover i,
 .contact a:focus i {
-  color: #858585; }
+  color: #999999; }
 
 @keyframes slideIn {
   0% {
@@ -371,16 +371,16 @@ nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
     margin-bottom: 40px; }
 
 button {
-  border: solid 0.5px #373737;
+  border: solid 0.5px #C2C0BC;
   background: transparent;
-  color: #373737;
+  color: #C2C0BC;
   padding: 8px;
   margin-top: 10px;
   transition: all .1s; }
 
 a {
   text-decoration: none;
-  color: #373737; }
+  color: #C2C0BC; }
 
 button:focus,
 button:hover {
