@@ -13,10 +13,11 @@ var routes = {
 //Setup route bindings
 exports = module.exports = function (app) {
   app.get('/', routes.views.index);
-  app.get('/news', routes.views.news);
   app.get('/about', routes.views.about);
   app.get('/contact', routes.views.contact);
   app.get('/team', routes.views.team);
   app.get('/video', routes.views.video);
+  app.get('/images', routes.views.images);
+
 
 };

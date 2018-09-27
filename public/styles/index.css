@@ -48,6 +48,9 @@ body {
   justify-content: center;
   font-family: "Work Sans", Arial, sans-serif; }
 
+* {
+  box-sizing: border-box; }
+
 .splash {
   display: flex;
   align-items: center;
@@ -103,18 +106,46 @@ nav.navbar {
   align-items: center;
   height: 2em;
   background-color: inherit;
-  z-index: 100; }
+  z-index: 10; }
+  nav.navbar .hamburger {
+    display: none;
+    color: #373737; }
+  nav.navbar .hamburger:hover {
+    cursor: pointer;
+    color: #858585; }
+  nav.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0; }
   nav.navbar a {
     text-decoration: none;
     color: #373737; }
   nav.navbar .links {
-    margin-right: 10px;
     display: flex; }
     nav.navbar .links .link {
-      padding: 2px 10px;
+      padding: 2px 12px;
       text-transform: uppercase; }
+  nav.navbar .full {
+    margin-right: 10px;
+    display: flex;
+    transition: all 1s ease-out; }
+  nav.navbar .contracted {
+    display: none; }
+  nav.navbar .expanded {
+    display: block;
+    position: absolute;
+    top: 2em;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    width: 100vw;
+    border-bottom: 1px solid #858585;
+    animation: fadeIn 0.3s 1; }
+    nav.navbar .expanded li {
+      display: block;
+      padding: 10px; }
 
-.contacts {
+@keyframes expand {}.contacts {
   display: flex;
   flex-direction: column;
   min-height: 60vh;
@@ -150,6 +181,9 @@ nav.navbar {
   display: grid;
   grid-template-columns: 35% 65%;
   grid-gap: 10px; }
+
+.team .team-list {
+  text-align: center; }
 
 .team h2:nth-child(1) {
   margin-top: 0; }
@@ -211,6 +245,91 @@ nav.navbar {
 
 .videos.container {
   max-width: none; }
+
+@media (max-width: 800px) {
+  .videos .video-container {
+    width: 100vw; } }
+
+.images.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding-bottom: 20px; }
+  .images.container h1 {
+    width: 100%; }
+  .images.container .column {
+    flex: calc(100% / 3);
+    max-width: calc(100% / 3); }
+    .images.container .column img {
+      vertical-align: middle;
+      width: 100%;
+      padding: 3px;
+      cursor: pointer; }
+    .images.container .column img:hover {
+      opacity: 0.8; }
+
+@media screen and (max-width: 675px) {
+  .images.container .column {
+    flex: 100%;
+    max-width: 100%; } }
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+#myImg:hover {
+  opacity: 0.7; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  /* Stay in place */
+  z-index: 2000;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: darkgray;
+  /* Fallback color */
+  background-color: rgba(169, 169, 169, 0.9);
+  /* Black w/ opacity */
+  animation: fadeIn .2s 1; }
+
+/* Modal Content (Image) */
+.modal-content {
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  animation: fadeIn 1s 1; }
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  color: #f4f4f4;
+  font-size: 40px;
+  font-weight: 100;
+  transition: 0.3s; }
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer; }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%; } }
 
 nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
 .contact a:focus .iconLabel,

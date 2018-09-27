@@ -20,6 +20,9 @@ body {
     justify-content: center;
     font-family: $body-font;
 }
+*{
+    box-sizing:border-box;
+}
 
 @import './homepage';
 @import './navbar';
@@ -27,6 +30,10 @@ body {
 @import './team';
 @import './about';
 @import './video';
+@import './images';
+@import './modal';
+
+
 
 %link-hover {
     color: $bg-contrast-2;

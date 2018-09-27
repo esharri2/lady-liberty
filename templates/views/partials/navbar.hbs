@@ -1,9 +1,47 @@
-<nav class="navbar">    
-    <div class="links">
+<nav class="navbar">
+    <i class="fas fa-bars hamburger"></i>
+    <ul class="links">
         {{# each navLinks}}
-        <div>
-            <a {{#ifeq ../section key}}class="active link" {{else}}class="link"{{/ifeq}} href="{{ href }}">{{ label }}</a>
-        </div>
+        <li>
+            <a {{#ifeq ../section key}} class="active link" {{else}} class="link" {{/ifeq}} href="{{ href }}">{{ label
+                }}</a>
+        </li>
         {{/each}}
-    </div>
+    </ul>
 </nav>
+
+<script>
+    (function () {
+        const links = document.querySelector('.links');
+        const hamburger = document.querySelector('.hamburger');
+
+        const toggleHamburger = () => {
+            if (window.innerWidth < 800) {
+                links.classList.add("contracted");
+                hamburger.style.display = "block";
+                links.classList.remove("full");
+
+            } else {
+                hamburger.style.display = "none";
+                links.classList.remove("contracted");
+                links.classList.remove("expanded");
+                links.classList.add("full");
+            }
+
+        }
+        window.addEventListener("resize", function () {
+            toggleHamburger();
+        })
+
+        window.addEventListener("load", function () {
+            toggleHamburger();
+        })
+
+        document.querySelector('.hamburger').addEventListener("click", function (event) {
+            links.classList.toggle('expanded');
+            links.classList.toggle('contracted');
+        })
+    })()
+
+
+</script>
