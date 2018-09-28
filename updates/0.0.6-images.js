@@ -4,7 +4,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836166/xd3gt1vddyhlonc54cnw.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836166/xd3gt1vddyhlonc54cnw.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 682,
                 width: 1022,
@@ -17,7 +17,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836235/eenluplskshs3oqevymh.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836235/eenluplskshs3oqevymh.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 692,
                 width: 1037,
@@ -30,7 +30,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836250/gdzphfrqlz9qy6wat0om.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836250/gdzphfrqlz9qy6wat0om.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 665,
                 width: 997,
@@ -43,7 +43,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836256/kkvzk57bhzzyihrsfsro.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836256/kkvzk57bhzzyihrsfsro.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 629,
                 width: 943,
@@ -56,7 +56,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836265/ljw7euv6njkoq6sh47nz.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836265/ljw7euv6njkoq6sh47nz.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 654,
                 width: 981,
@@ -69,7 +69,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836277/the6ve7v0st5jzlvrnuu.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836277/the6ve7v0st5jzlvrnuu.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 672,
                 width: 1008,
@@ -82,7 +82,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836285/kvwsod1c6j4sucfrefq4.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836285/kvwsod1c6j4sucfrefq4.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 628,
                 width: 942,
@@ -95,7 +95,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836299/vfbvhqo8eeflpzsv5box.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836299/vfbvhqo8eeflpzsv5box.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 612,
                 width: 918,
@@ -108,7 +108,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836308/rahysnalxl315oro3zb7.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836308/rahysnalxl315oro3zb7.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 692,
                 width: 1037,
@@ -121,7 +121,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836315/u3jd1vwhxn1hgegkqpoj.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836315/u3jd1vwhxn1hgegkqpoj.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 637,
                 width: 956,
@@ -134,7 +134,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836323/fmg0iq2tcmpjc8rzgyaa.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836323/fmg0iq2tcmpjc8rzgyaa.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 561,
                 width: 841,
@@ -147,7 +147,7 @@ exports.create = {
             image: {
                 secure_url: "https://res.cloudinary.com/esharri2/image/upload/v1537836330/hzpn7zttyoutqtvvevky.jpg",
                 url: "http://res.cloudinary.com/esharri2/image/upload/v1537836330/hzpn7zttyoutqtvvevky.jpg",
-                resource_type: image,
+                resource_type: "image",
                 format: "jpg",
                 height: 540,
                 width: 810,
