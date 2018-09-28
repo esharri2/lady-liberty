@@ -17,15 +17,9 @@
 
         const toggleHamburger = () => {
             if (window.innerWidth < 800) {
-                links.classList.add("contracted");
-                hamburger.style.display = "block";
-                links.classList.remove("full");
 
             } else {
-                hamburger.style.display = "none";
-                links.classList.remove("contracted");
                 links.classList.remove("expanded");
-                links.classList.add("full");
             }
 
         }
@@ -39,7 +33,6 @@
 
         document.querySelector('.hamburger').addEventListener("click", function (event) {
             links.classList.toggle('expanded');
-            links.classList.toggle('contracted');
         })
     })()
 

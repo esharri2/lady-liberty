@@ -10,7 +10,6 @@ nav.navbar {
     background-color: inherit;
     z-index: 10;
     .hamburger {
-        display: none;
         color: $bg-contrast-1;
     }
     .hamburger:hover {
@@ -21,6 +20,7 @@ nav.navbar {
         list-style-type: none;
         text-align: center;
         margin: 0;
+        padding: 0;
     }
     a {
         text-decoration: none;
@@ -30,7 +30,8 @@ nav.navbar {
         @extend %link-hover;
     }
     .links {
-        display: none;
+        display: flex;
+        transition: all 1s ease-out;
         .link {
             padding: 2px 12px;
             text-transform: uppercase;
@@ -39,15 +40,7 @@ nav.navbar {
             @extend %link-hover;
         }
     }
-    .full {
-        margin-right: 10px;
-        display: flex;
-        transition: all 1s ease-out;
-    }
-    .contracted {
-        display: none;
-    }
-    .expanded {
+    .expanded.links {
         display: block;
         position: absolute;
         top: $nav-height;
@@ -62,5 +55,28 @@ nav.navbar {
         }
         animation:fadeIn 0.3s 1;
     }
-    @keyframes expand {}
+
+}
+
+@media screen and (max-width:800px) {
+    nav.navbar {
+        .links {
+            display: none;
+            color:red!important;
+        }
+        .hamburger {
+            display: block;
+        }
+    }
+}
+@media screen and (min-width:800px) {
+    nav.navbar {
+        .links {
+            margin-right: 10px;
+            display: flex;
+        }
+        .hamburger {
+            display: none;
+        }
+    }
 }

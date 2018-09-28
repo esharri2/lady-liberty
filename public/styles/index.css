@@ -108,7 +108,6 @@ nav.navbar {
   background-color: inherit;
   z-index: 10; }
   nav.navbar .hamburger {
-    display: none;
     color: #C2C0BC; }
   nav.navbar .hamburger:hover {
     cursor: pointer;
@@ -116,22 +115,18 @@ nav.navbar {
   nav.navbar ul {
     list-style-type: none;
     text-align: center;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
   nav.navbar a {
     text-decoration: none;
     color: #C2C0BC; }
   nav.navbar .links {
-    display: none; }
+    display: flex;
+    transition: all 1s ease-out; }
     nav.navbar .links .link {
       padding: 2px 12px;
       text-transform: uppercase; }
-  nav.navbar .full {
-    margin-right: 10px;
-    display: flex;
-    transition: all 1s ease-out; }
-  nav.navbar .contracted {
-    display: none; }
-  nav.navbar .expanded {
+  nav.navbar .expanded.links {
     display: block;
     position: absolute;
     top: 2em;
@@ -141,11 +136,25 @@ nav.navbar {
     width: 100vw;
     border-bottom: 1px solid #999999;
     animation: fadeIn 0.3s 1; }
-    nav.navbar .expanded li {
+    nav.navbar .expanded.links li {
       display: block;
       padding: 10px; }
 
-@keyframes expand {}.contacts {
+@media screen and (max-width: 800px) {
+  nav.navbar .links {
+    display: none;
+    color: red !important; }
+  nav.navbar .hamburger {
+    display: block; } }
+
+@media screen and (min-width: 800px) {
+  nav.navbar .links {
+    margin-right: 10px;
+    display: flex; }
+  nav.navbar .hamburger {
+    display: none; } }
+
+.contacts {
   display: flex;
   flex-direction: column;
   min-height: 60vh;
