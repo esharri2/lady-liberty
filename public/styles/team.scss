@@ -68,26 +68,55 @@
         transition: all .2s;
     }
     #modal-content {
-        max-width:800px;
-        height:80vh;
+        padding:0 20px;
+        max-width: 800px;
+        height: 80vh;
         text-align: left;
         .person {
-            color:black;
+            color: black;
             width: 100%;
-            display:block;
+            display: block;
+            a {
+                color: $background;
+                text-decoration: underline;
+                font-family: $title-font;
+            }
+            .person-link {
+                display: block;
+                margin-top: 10px;
+            }
             .img-wrapper {
                 float: left;
                 width: 50%;
-                height:auto;
-                background:none;
+                height: auto;
+                background: none;
                 margin: 0 20px 0 0;
                 img {
-                    width:100%;
-                    height:auto;
-                    display:block;
-                    margin: 0 auto!important;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto !important;
                 }
             }
         }
     }
+}
+
+@media (max-width:475px) {
+    .team.container {
+        #modal-content {
+        }
+        *:not(#modal-content) {
+            .person {
+                width: 100%;
+                max-height: 250px;
+                height: auto;
+                .img-wrapper {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    
 }
