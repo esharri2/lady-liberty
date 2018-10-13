@@ -2,32 +2,69 @@
 
 <div class="container team">
     <h1>Cast and Crew</h1>
-        <section class="team-list">
-            {{#each everyone}}
-            <h2>{{this.label}}</h2>
-            <ul>
-                {{#each this.team}}
-                <li class="person">
-                    <ul>
-                        {{#if link}}
-                        <li class="name"><a href="{{link}}">{{name}}</a></li>
-                        {{else}}
-                        <li class="name">{{name}}</li>
-                        {{/if}}
-                        {{#if role}}
-                        {{/if}}
-                        <li class="role">{{role}}</li>
-                    </ul>
-                </li>
-                {{/each}}
-            </ul>
+    <section class="team-list">
+        {{#each everyone}}
+        <h2>{{this.label}}</h2>
+        <ul class="team-group">
+            {{#each this.team}}
+            <li class="person {{#if image.secure_url}}has-img{{/if}}">
+                {{#if image.secure_url}}
+                <div class="img-wrapper">
+                    <img src={{image.secure_url}} alt={{title}} />
+                </div>
+                {{/if}}
+                <p class="name">{{name}}</p>
+                {{#if role}}
+                <p class="role">{{role}}</p>
+                {{/if}}
+                {{#if link}}
+                <a class="person-link" href="{{link}}">Website</a>
+                {{/if}}
+                {{#if bio}}
+                <div class="bio">{{{bio}}}</div>
+                {{/if}}
+            </li>
             {{/each}}
-        </section>
-        {{!-- <section class="photos">
-            <img src="./media/ll_still_4.jpg" />
-            <img src="./media/ll_still_5.jpg" />
-            <img src="./media/ll_still_3.jpg" />
-            <img src="./media/ll_still_2.jpg" />
-        </section> --}}
+        </ul>
+        {{/each}}
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </section>
 </div>
-</div>
+
+<script>
+    //Polyfill for closest
+    {{!-- if (!Element.prototype.matches)
+        Element.prototype.matches = Element.prototype.msMatchesSelector ||
+            Element.prototype.webkitMatchesSelector;
+
+    if (!Element.prototype.closest) {
+        Element.prototype.closest = function (s) {
+            var el = this;
+            if (!document.documentElement.contains(el)) return null;
+            do {
+                if (el.matches(s)) return el;
+                el = el.parentElement || el.parentNode;
+            } while (el !== null && el.nodeType === 1);
+            return null;
+        };
+    } --}}
+
+    //Modal stuff
+    document.querySelector('body').addEventListener('click', function (event) {
+        if (event.target.matches('.person') || event.target.matches('.person *')) {
+            var modal = document.getElementById('myModal');
+            var modalContent = document.getElementById('modal-content');
+            modal.style.display = "flex";
+            console.log(event.target.closest('.person'))
+
+            modalContent.innerHTML = `<div class="person">${event.target.closest('.person').innerHTML}</div>`
+        }
+        if (event.target.matches('.close') || event.target.matches('.modal')) {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+    })
+</script>

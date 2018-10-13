@@ -1,16 +1,16 @@
 exports.create = {
     TeamRoles: [
         {
-            name: 'Cast'
+            name: 'Cast',
+            order: 1
         },
         {
-            name: 'Crew'
+            name: 'Crew',
+            order: 3
         },
         {
-            name: 'Writer & director'
-        },
-        {
-           name: 'Production'
-        },
+            name: 'Creative Team',
+            order: 2
+        }
     ],
 };

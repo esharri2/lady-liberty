@@ -177,50 +177,84 @@ nav.navbar {
     margin-left: 10px;
     text-transform: uppercase; }
 
-.team img {
-  width: 100%;
-  margin-bottom: 20px; }
-
-.team h2 {
-  font-size: 25px;
-  font-family: "Crimson Text", serif;
-  margin: 40px 0 20px 0; }
-
-.team .wrapper {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-gap: 10px; }
-
-.team .team-list {
+.team.container {
+  max-width: 1200px;
   text-align: center; }
+  .team.container h2 {
+    font-size: 25px;
+    font-family: "Crimson Text", serif;
+    margin: 50px 0 20px 0; }
+  .team.container h2:nth-child(1) {
+    margin-top: 0; }
+  .team.container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .team.container li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .team.container .team-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .team.container .team-group .bio,
+    .team.container .team-group .person-link {
+      display: none; }
+    .team.container .team-group .person:hover {
+      background: #C2C0BC;
+      color: #53656F;
+      cursor: pointer; }
+  .team.container .person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    height: 200px;
+    width: 225px;
+    transition: all .2s; }
+    .team.container .person .img-wrapper {
+      height: 70%;
+      width: 90%;
+      margin: 0 auto;
+      background: black;
+      overflow: hidden; }
+      .team.container .person .img-wrapper img {
+        height: 100%;
+        width: auto;
+        align-self: center; }
+    .team.container .person .name {
+      font-family: "Work Sans", Arial, sans-serif;
+      text-transform: uppercase;
+      margin: 6px 0 4px 0; }
+      .team.container .person .name a {
+        border-bottom: 0.5px solid #C2C0BC; }
+    .team.container .person .role {
+      font-family: "Crimson Text", serif;
+      font-style: italic;
+      margin: 0; }
+  .team.container #modal-content {
+    max-width: 800px;
+    height: 80vh;
+    text-align: left; }
+    .team.container #modal-content .person {
+      color: black;
+      width: 100%;
+      display: block; }
+      .team.container #modal-content .person .img-wrapper {
+        float: left;
+        width: 50%;
+        height: auto;
+        background: none;
+        margin: 0 20px 0 0; }
+        .team.container #modal-content .person .img-wrapper img {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto !important; }
 
-.team h2:nth-child(1) {
-  margin-top: 0; }
-
-.team .person {
-  padding: 5px 0; }
-
-.team .name {
-  font-family: "Work Sans", Arial, sans-serif;
-  text-transform: uppercase;
-  padding: 2px 0; }
-  .team .name a {
-    border-bottom: 0.5px solid #C2C0BC; }
-
-.team .role {
-  font-family: "Crimson Text", serif;
-  font-style: italic;
-  padding: 2px 0; }
-
-.team ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.team li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
+.about p {
+  font-size: 1.1em; }
 
 .videos h2 {
   font-size: 25px;

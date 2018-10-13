@@ -14,12 +14,11 @@ module.exports = function (req, res) {
         var q = Person.model.find().populate('category');
         q.exec(function (err, results) {
             //Create an array of the categories
-            console.log(results);
             const categoriesArray = results.map(person => person.category.name);
             const categories = [...new Set(categoriesArray)];
             const everyone = [];
 
-            //Built team array with team members organized by category
+            //Build team array with team members organized by category
             categories.forEach(item => {
                 everyone.push(
                     {
@@ -28,7 +27,10 @@ module.exports = function (req, res) {
                     })
             }
             )
+
+            console.log(everyone)
             locals.everyone = everyone;
+
             next(err);
         })
 

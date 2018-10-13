@@ -1,42 +1,13 @@
-.team {
-    img {
-        width: 100%;
-        margin-bottom:20px;
-    }
-    
+.team.container {
+    max-width: 1200px;
+    text-align: center;
     h2 {
         font-size: 25px;
         font-family: $title-font;
-        margin: 40px 0 20px 0;
-    }
-    .wrapper {
-        display: grid;
-        grid-template-columns: 35% 65%;
-        grid-gap: 10px;
-    }
-    .team-list {
-        text-align: center;
+        margin: 50px 0 20px 0;
     }
     h2:nth-child(1) {
-        margin-top:0
-    }
-
-    .person {
-        padding: 5px 0;
-    }
-    .name {
-        font-family: $body-font;
-        text-transform: uppercase;
-        padding: 2px 0;
-        a {
-            // text-decoration:underline;
-            border-bottom: 0.5px solid $bg-contrast-1;
-        }
-    }
-    .role {
-        font-family: $title-font;
-        font-style: italic;
-        padding: 2px 0;
+        margin-top: 0
     }
     ul {
         list-style-type: none;
@@ -47,5 +18,76 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
+    }
+    .team-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; // Hide bio and link until modal
+        .bio,
+        .person-link {
+            display: none;
+        }
+        .person:hover {
+            background: $bg-contrast-1;
+            color: $background;
+            cursor: pointer;
+        }
+    }
+    .person {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // 
+        margin: 5px;
+        height: 200px;
+        width: 225px;
+        .img-wrapper {
+            height: 70%;
+            width: 90%;
+            margin: 0 auto;
+            background: black;
+            overflow: hidden;
+            img {
+                height: 100%;
+                width: auto;
+                align-self: center;
+            }
+        }
+        .name {
+            font-family: $body-font;
+            text-transform: uppercase;
+            margin: 6px 0 4px 0;
+            a {
+                border-bottom: 0.5px solid $bg-contrast-1;
+            }
+        }
+        .role {
+            font-family: $title-font;
+            font-style: italic;
+            margin: 0;
+        }
+        transition: all .2s;
+    }
+    #modal-content {
+        max-width:800px;
+        height:80vh;
+        text-align: left;
+        .person {
+            color:black;
+            width: 100%;
+            display:block;
+            .img-wrapper {
+                float: left;
+                width: 50%;
+                height:auto;
+                background:none;
+                margin: 0 20px 0 0;
+                img {
+                    width:100%;
+                    height:auto;
+                    display:block;
+                    margin: 0 auto!important;
+                }
+            }
+        }
     }
 }

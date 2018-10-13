@@ -14,6 +14,7 @@ keystone.init({
     'user model': 'User',
     'auto update': true,
     'auth': true,
+    'mongo': process.env.MONGO_URI || "mongodb://localhost/prodco",
     'views': 'templates/views',
     'view engine': '.hbs',
     'custom engine': handlebars.create({
