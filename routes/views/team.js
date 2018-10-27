@@ -7,30 +7,25 @@ module.exports = function (req, res) {
     var locals = res.locals;
     locals.section = 'team';
 
-
     var Person = keystone.list('Person');
 
     view.on('init', function (next) {
         var q = Person.model.find().populate('category');
         q.exec(function (err, results) {
-            //Create an array of the categories
-            const categoriesArray = results.map(person => person.category.name);
-            const categories = [...new Set(categoriesArray)];
-            const everyone = [];
-
-            //Build team array with team members organized by category
-            categories.forEach(item => {
-                everyone.push(
-                    {
-                        label: item,
-                        team: results.filter(person => person.category.name === item)
-                    })
-            }
-            )
-
-            console.log(everyone)
-            locals.everyone = everyone;
-
+            const sortedTeam = results.sort((a, b) => {
+                if (a.order > b.order) {
+                    return 1;
+                } else if (a.order < b.order) {
+                    return -1;
+                }
+            })
+            sortedTeam.forEach((person) => {
+                if (person.bio || person.image) {
+                    person.showMoreButton = true;
+                    console.log(person);
+                }
+            })
+            locals.everyone = sortedTeam;
             next(err);
         })
 

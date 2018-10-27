@@ -15,7 +15,8 @@ Person.add({
     category: { type: Types.Relationship, ref: 'TeamRoles', many: false, required: true, initial: true },
     link: { type: Types.Url, note: 'Optional. You must include https:// at the start of the url.' },
     bio: { type: Types.Html, wysiwyg: true, note: 'Optional.' },
-    image: { type: Types.CloudinaryImage, note: 'Optional' }
+    image: { type: Types.CloudinaryImage, note: 'Optional' },
+    order: {type: Types.Number, default:null}
 });
 
 Person.defaultColumns = 'name, role';

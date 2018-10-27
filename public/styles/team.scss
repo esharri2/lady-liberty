@@ -1,13 +1,24 @@
 .team.container {
     max-width: 1200px;
-    text-align: center;
-    h2 {
-        font-size: 25px;
+    min-width: 300px;
+    text-align:center;
+    .tabs {
+        font-size: 20px;
         font-family: $title-font;
-        margin: 50px 0 20px 0;
-    }
-    h2:nth-child(1) {
-        margin-top: 0
+        list-style-type: none;
+        width: 100%;
+        margin-bottom:45px;
+        display:flex;
+        justify-content: space-evenly;
+        .tab {
+            margin: 0 20px;
+            opacity: .5;
+            cursor: pointer;
+            &.active {
+                opacity: 1;
+                border-bottom:$bg-contrast-1 solid 1px;
+            }
+        }
     }
     ul {
         list-style-type: none;
@@ -19,43 +30,24 @@
         padding: 0;
         list-style-type: none;
     }
+    h2:nth-child(1) {
+        margin-top: 0
+    }
     .team-group {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; // Hide bio and link until modal
+        // Hide bio picture, and link until modal
         .bio,
-        .person-link {
+        .person-link,
+        img {
             display: none;
-        }
-        .person:hover {
-            background: $bg-contrast-1;
-            color: $background;
-            cursor: pointer;
-        }
+        }     
     }
     .person {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; // 
-        margin: 5px;
-        height: 200px;
-        width: 225px;
-        .img-wrapper {
-            height: 70%;
-            width: 90%;
-            margin: 0 auto;
-            background: black;
-            overflow: hidden;
-            img {
-                height: 100%;
-                width: auto;
-                align-self: center;
-            }
-        }
+        // max-width:210px;
+        margin:20px auto 35px auto;        
         .name {
             font-family: $body-font;
             text-transform: uppercase;
-            margin: 6px 0 4px 0;
+            margin:0;
             a {
                 border-bottom: 0.5px solid $bg-contrast-1;
             }
@@ -63,12 +55,25 @@
         .role {
             font-family: $title-font;
             font-style: italic;
-            margin: 0;
+            margin:0;
         }
+        button {
+            padding:3px 6px;
+            font-family:$body-font;
+            text-transform:uppercase;
+            color:$background;
+            background:$bg-contrast-1;
+        }
+        button:hover {
+            color:$bg-contrast-1;
+            background:$background;
+        }
+
         transition: all .2s;
     }
+
     #modal-content {
-        padding:0 20px;
+        padding: 0 20px;
         max-width: 800px;
         height: 80vh;
         text-align: left;
@@ -81,6 +86,9 @@
                 text-decoration: underline;
                 font-family: $title-font;
             }
+            .showAbout {
+                display:none;
+            }
             .person-link {
                 display: block;
                 margin-top: 10px;
@@ -90,33 +98,22 @@
                 width: 50%;
                 height: auto;
                 background: none;
-                margin: 0 20px 0 0;
+                margin: 0 20px 20px 0;
                 img {
                     width: 100%;
                     height: auto;
                     display: block;
                     margin: 0 auto !important;
                 }
-            }
+            }       
         }
     }
 }
 
-@media (max-width:475px) {
-    .team.container {
-        #modal-content {
-        }
-        *:not(#modal-content) {
-            .person {
-                width: 100%;
-                max-height: 250px;
-                height: auto;
-                .img-wrapper {
-                    background: none;
-                }
-            }
+@media (max-width:400px) {
+    .team.container #modal-content .person  {
+        .img-wrapper {
+            width:100%;
         }
     }
-
-    
 }

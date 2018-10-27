@@ -179,13 +179,23 @@ nav.navbar {
 
 .team.container {
   max-width: 1200px;
+  min-width: 300px;
   text-align: center; }
-  .team.container h2 {
-    font-size: 25px;
+  .team.container .tabs {
+    font-size: 20px;
     font-family: "Crimson Text", serif;
-    margin: 50px 0 20px 0; }
-  .team.container h2:nth-child(1) {
-    margin-top: 0; }
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-evenly; }
+    .team.container .tabs .tab {
+      margin: 0 20px;
+      opacity: .5;
+      cursor: pointer; }
+      .team.container .tabs .tab.active {
+        opacity: 1;
+        border-bottom: #C2C0BC solid 1px; }
   .team.container ul {
     list-style-type: none;
     margin: 0;
@@ -194,45 +204,34 @@ nav.navbar {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-  .team.container .team-group {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
-    .team.container .team-group .bio,
-    .team.container .team-group .person-link {
-      display: none; }
-    .team.container .team-group .person:hover {
-      background: #C2C0BC;
-      color: #53656F;
-      cursor: pointer; }
+  .team.container h2:nth-child(1) {
+    margin-top: 0; }
+  .team.container .team-group .bio,
+  .team.container .team-group .person-link,
+  .team.container .team-group img {
+    display: none; }
   .team.container .person {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 5px;
-    height: 200px;
-    width: 225px;
+    margin: 20px auto 35px auto;
     transition: all .2s; }
-    .team.container .person .img-wrapper {
-      height: 70%;
-      width: 90%;
-      margin: 0 auto;
-      background: black;
-      overflow: hidden; }
-      .team.container .person .img-wrapper img {
-        height: 100%;
-        width: auto;
-        align-self: center; }
     .team.container .person .name {
       font-family: "Work Sans", Arial, sans-serif;
       text-transform: uppercase;
-      margin: 6px 0 4px 0; }
+      margin: 0; }
       .team.container .person .name a {
         border-bottom: 0.5px solid #C2C0BC; }
     .team.container .person .role {
       font-family: "Crimson Text", serif;
       font-style: italic;
       margin: 0; }
+    .team.container .person button {
+      padding: 3px 6px;
+      font-family: "Work Sans", Arial, sans-serif;
+      text-transform: uppercase;
+      color: #53656F;
+      background: #C2C0BC; }
+    .team.container .person button:hover {
+      color: #C2C0BC;
+      background: #53656F; }
   .team.container #modal-content {
     padding: 0 20px;
     max-width: 800px;
@@ -246,6 +245,8 @@ nav.navbar {
         color: #53656F;
         text-decoration: underline;
         font-family: "Crimson Text", serif; }
+      .team.container #modal-content .person .showAbout {
+        display: none; }
       .team.container #modal-content .person .person-link {
         display: block;
         margin-top: 10px; }
@@ -254,20 +255,16 @@ nav.navbar {
         width: 50%;
         height: auto;
         background: none;
-        margin: 0 20px 0 0; }
+        margin: 0 20px 20px 0; }
         .team.container #modal-content .person .img-wrapper img {
           width: 100%;
           height: auto;
           display: block;
           margin: 0 auto !important; }
 
-@media (max-width: 475px) {
-  .team.container *:not(#modal-content) .person {
-    width: 100%;
-    max-height: 250px;
-    height: auto; }
-    .team.container *:not(#modal-content) .person .img-wrapper {
-      background: none; } }
+@media (max-width: 400px) {
+  .team.container #modal-content .person .img-wrapper {
+    width: 100%; } }
 
 .about p {
   font-size: 1.1em; }
