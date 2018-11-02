@@ -19,17 +19,14 @@ module.exports = function (req, res) {
                     return -1;
                 }
             })
-            sortedTeam.forEach((person) => {
-                if (person.bio || person.image) {
+            sortedTeam.forEach((person, index) => {
+                if (person.bio !== "" || person.image.secure_url) {
                     person.showMoreButton = true;
-                    console.log(person);
                 }
             })
             locals.everyone = sortedTeam;
             next(err);
         })
-
-
     })
 
 
