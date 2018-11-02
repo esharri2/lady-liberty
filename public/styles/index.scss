@@ -82,7 +82,7 @@ body {
 
 //Global styles
 .container {
-    margin: $nav-height *3 auto 0 auto;
+    margin-top: $nav-height*2;
     max-width: 600px;
     padding: 0 10px;
     animation: fadeIn 1s 1;

@@ -416,7 +416,7 @@ nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
     opacity: 1; } }
 
 .container {
-  margin: 6em auto 0 auto;
+  margin-top: 4em;
   max-width: 600px;
   padding: 0 10px;
   animation: fadeIn 1s 1; }
