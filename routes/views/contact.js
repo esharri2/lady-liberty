@@ -30,6 +30,9 @@ module.exports = function (req, res) {
                     case 'instagram':
                         iconName = "fab fa-instagram";
                         break;
+                    default:
+                        iconName = "fas fa-globe";
+                        
                 }
                 res.icon = iconName;
                 locals.contacts.push(res)

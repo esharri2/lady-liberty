@@ -63,6 +63,7 @@ body {
   .splash h1 {
     animation: slideIn 2s 1;
     font-size: calc(40px + 3.5vw);
+    margin-top: 130px;
     padding: 0 5px;
     font-weight: 300;
     text-align: center;
@@ -99,7 +100,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -2; }
+  z-index: -2;
+  animation: fadeIn 2s 1; }
 
 .filter {
   background-color: #53656F;
