@@ -111,8 +111,21 @@ body {
     font-family: "Crimson Text", serif;
     font-size: 20px;
     font-style: italic;
+<<<<<<< HEAD
     margin-top: 15px;
     display: inline-block; }
+=======
+    margin-top: 15px; }
+  .splash img {
+    filter: grayscale(0) opacity(0.4);
+    width: 100vw;
+    min-width: 650px;
+    position: absolute;
+    z-index: -1;
+    animation: rampFadeIn 4s 1; }
+  .splash img::after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%); }
+>>>>>>> parent of 85eed7a... changed home img
   .splash .link-button {
     padding: 10px;
     border: solid 1px #C2C0BC;
@@ -341,7 +354,7 @@ body > nav.navbar {
   overflow: hidden;
   width: 60vw; }
 
-.videos .video-container:not(:first-child) {
+s.videos .video-container:not(:first-child) {
   margin-bottom: 25px; }
 
 .videos .video-container iframe,
@@ -470,7 +483,7 @@ body > nav.navbar {
     opacity: 1; } }
 
 .container {
-  margin-top: 6em;
+  margin-top: 4em;
   max-width: 600px;
   padding: 0 10px;
   animation: fadeIn 1s 1; }
