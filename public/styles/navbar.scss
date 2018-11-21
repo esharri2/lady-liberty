@@ -1,4 +1,4 @@
-nav.navbar {
+body>nav.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,6 +35,13 @@ nav.navbar {
         .link {
             padding: 2px 12px;
             text-transform: uppercase;
+            .link {
+                padding: 2px 12px;
+                text-transform: uppercase;
+            }
+            .link:hover {
+                @extend %link-hover;
+            }
         }
         .link:hover {
             @extend %link-hover;
@@ -59,10 +66,9 @@ nav.navbar {
 }
 
 @media screen and (max-width:800px) {
-    nav.navbar {
+    body>nav.navbar {
         .links {
             display: none;
-            color:red!important;
         }
         .hamburger {
             display: block;
@@ -70,7 +76,7 @@ nav.navbar {
     }
 }
 @media screen and (min-width:800px) {
-    nav.navbar {
+    body>nav.navbar {
         .links {
             margin-right: 10px;
             display: flex;

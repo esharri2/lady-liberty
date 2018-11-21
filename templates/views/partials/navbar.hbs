@@ -12,28 +12,34 @@
 
 <script>
     (function () {
-        const links = document.querySelector('.links');
-        const hamburger = document.querySelector('.hamburger');
+        const links = document.querySelector('body > .navbar .links');
+        if (links) {
+            console.log("it worked!");
+            const hamburger = document.querySelector('.hamburger');
 
-        const toggleHamburger = () => {
-            if (window.innerWidth < 800) {
+            const toggleHamburger = () => {
+                if (window.innerWidth < 800) {
 
-            } else {
-                links.classList.remove("expanded");
+                } else {
+                    links.classList.remove("expanded");
+                }
+
             }
+            window.addEventListener("resize", function () {
+                toggleHamburger();
+            })
 
+            window.addEventListener("load", function () {
+                toggleHamburger();
+            })
+
+            document.querySelector('.hamburger').addEventListener("click", function (event) {
+                links.classList.toggle('expanded');
+            })
         }
-        window.addEventListener("resize", function () {
-            toggleHamburger();
-        })
 
-        window.addEventListener("load", function () {
-            toggleHamburger();
-        })
 
-        document.querySelector('.hamburger').addEventListener("click", function (event) {
-            links.classList.toggle('expanded');
-        })
+
     })()
 
 
