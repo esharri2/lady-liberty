@@ -52,83 +52,42 @@ body {
   box-sizing: border-box; }
 
 .splash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: relative; }
-  .splash .content {
-    position: absolute;
-    bottom: 50px;
-    left: 20px;
-    width: 100%; }
-    .splash .content .title {
-      margin-bottom: 10px; }
-    .splash .content nav.navbar {
-      position: static;
-      top: 0;
-      left: 0;
-      width: 50%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: baseline;
-      height: auto;
-      background-color: inherit;
-      z-index: 0;
-      animation: rampFadeIn 3s 1; }
-      .splash .content nav.navbar .links {
-        text-align: left; }
-      .splash .content nav.navbar .link {
-        display: block;
-        text-transform: uppercase;
-        padding-top: 5px; }
-      .splash .content nav.navbar .hamburger {
-        display: none; }
-      .splash .content nav.navbar ul {
-        list-style-type: none;
-        text-align: center;
-        margin: 0;
-        padding: 0; }
-      .splash .content nav.navbar a {
-        text-decoration: none;
-        color: #C2C0BC; }
-    @media (max-width: 500px) {
-      .splash .content {
-        bottom: 20px; }
-        .splash .content nav.navbar {
-          width: 100%; }
-        .splash .content .link-button {
-          position: static;
-          display: inline-block;
-          margin-top: 10px; } }
   .splash h1 {
+    animation: slideIn 2s 1;
     font-size: calc(40px + 3.5vw);
+    padding: 0 5px;
     font-weight: 300;
+    text-align: center;
     color: #C2C0BC;
     font-family: "Crimson Text", serif;
-    position: relative;
-    display: inline-block; }
+    position: relative; }
   .splash .subtitle {
     font-family: "Crimson Text", serif;
+    animation: rampFadeIn 2s 1;
     font-size: 20px;
     font-style: italic;
-    margin-top: 15px;
-    display: inline-block; }
+    margin-top: 15px; }
   .splash .link-button {
+    margin: 30px;
     padding: 10px;
     border: solid 1px #C2C0BC;
     font-family: "Work Sans", Arial, sans-serif;
     text-transform: uppercase;
     transition: all .5s;
-    animation: rampFadeIn 3s 1;
-    position: fixed;
-    right: 20px;
-    bottom: 50px; }
+    animation: rampFadeIn 4s 1; }
   .splash .link-button:hover {
     color: #53656F;
     background: #C2C0BC; }
 
-.background-img-wrap,
-.filter {
+.background-img-wrap, .filter {
   position: fixed;
   top: 0;
   left: 0;
@@ -140,15 +99,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -2;
-  animation: rampFadeIn 2s 1; }
+  z-index: -2; }
 
 .filter {
   background-color: #53656F;
   opacity: .4;
   z-index: -1; }
 
-body > nav.navbar {
+nav.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -159,29 +117,26 @@ body > nav.navbar {
   height: 2em;
   background-color: inherit;
   z-index: 10; }
-  body > nav.navbar .hamburger {
+  nav.navbar .hamburger {
     color: #C2C0BC; }
-  body > nav.navbar .hamburger:hover {
+  nav.navbar .hamburger:hover {
     cursor: pointer;
     color: #999999; }
-  body > nav.navbar ul {
+  nav.navbar ul {
     list-style-type: none;
     text-align: center;
     margin: 0;
     padding: 0; }
-  body > nav.navbar a {
+  nav.navbar a {
     text-decoration: none;
     color: #C2C0BC; }
-  body > nav.navbar .links {
+  nav.navbar .links {
     display: flex;
     transition: all 1s ease-out; }
-    body > nav.navbar .links .link {
+    nav.navbar .links .link {
       padding: 2px 12px;
       text-transform: uppercase; }
-      body > nav.navbar .links .link .link {
-        padding: 2px 12px;
-        text-transform: uppercase; }
-  body > nav.navbar .expanded.links {
+  nav.navbar .expanded.links {
     display: block;
     position: absolute;
     top: 2em;
@@ -191,21 +146,22 @@ body > nav.navbar {
     width: 100vw;
     border-bottom: 1px solid #999999;
     animation: fadeIn 0.3s 1; }
-    body > nav.navbar .expanded.links li {
+    nav.navbar .expanded.links li {
       display: block;
       padding: 10px; }
 
 @media screen and (max-width: 800px) {
-  body > nav.navbar .links {
-    display: none; }
-  body > nav.navbar .hamburger {
+  nav.navbar .links {
+    display: none;
+    color: red !important; }
+  nav.navbar .hamburger {
     display: block; } }
 
 @media screen and (min-width: 800px) {
-  body > nav.navbar .links {
+  nav.navbar .links {
     margin-right: 10px;
     display: flex; }
-  body > nav.navbar .hamburger {
+  nav.navbar .hamburger {
     display: none; } }
 
 .contacts {
@@ -441,7 +397,7 @@ body > nav.navbar {
   .modal-content {
     width: 100%; } }
 
-.splash .content nav.navbar .link:hover, .splash .content nav.navbar .active, body > nav.navbar .active, body > nav.navbar .links .link .link:hover, body > nav.navbar .links .link:hover, .contact a:hover .iconLabel,
+nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
 .contact a:focus .iconLabel,
 .contact a:hover i,
 .contact a:focus i {
