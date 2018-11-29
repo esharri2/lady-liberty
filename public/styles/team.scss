@@ -97,11 +97,12 @@
                 float: left;
                 width: 50%;
                 height: auto;
+                max-height:400px;
                 background: none;
                 margin: 0 20px 20px 0;
                 img {
-                    width: 100%;
                     height: auto;
+                    max-height:400px;
                     display: block;
                     margin: 0 auto !important;
                 }
