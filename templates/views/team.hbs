@@ -2,9 +2,9 @@
 
 <div class="container team">
     <ul class="tabs">
-        <li class="tab active" role="tab">Cast</li>
-        <li class="tab" role="tab">Creative Team</li>
-        <li class="tab" role="tab">Crew</li>
+        <li tabindex="0" class="tab active" role="tab">Cast</li>
+        <li tabindex="0"class="tab" role="tab">Creative Team</li>
+        <li tabindex="0" class="tab" role="tab">Crew</li>
     </ul>
     <section class="team-list">
         <ul class="team-group">
@@ -32,7 +32,7 @@
             {{/each}}
         </ul>
         <div id="myModal" class="modal">
-            <span class="close">&times;</span>
+            <button tabindex="0" class="close">&times;</button>
             <div id="modal-content"></div>
         </div>
     </section>
@@ -74,7 +74,8 @@
             var modal = document.getElementById('myModal');
             var modalContent = document.getElementById('modal-content');
             modal.style.display = "flex";
-            modalContent.innerHTML = `<div class="person">${event.target.closest('.person').innerHTML}</div>`
+            modalContent.innerHTML = `<div class="person">${event.target.closest('.person').innerHTML}</div>`;
+            document.querySelector(".close").focus();
         }
         if (event.target.matches('.close') || event.target.matches('.modal')) {
             var modal = document.getElementById('myModal');

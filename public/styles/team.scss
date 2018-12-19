@@ -19,6 +19,9 @@
                 border-bottom:$bg-contrast-1 solid 1px;
             }
         }
+        .tab:focus, .tab:hover {
+            opacity:1;
+        }
     }
     ul {
         list-style-type: none;
@@ -64,7 +67,7 @@
             color:$background;
             background:$bg-contrast-1;
         }
-        button:hover {
+        button:hover, button:focus {
             color:$bg-contrast-1;
             background:$background;
         }
@@ -77,6 +80,8 @@
         max-width: 800px;
         height: 80vh;
         text-align: left;
+
+    
         .person {
             color: black;
             width: 100%;

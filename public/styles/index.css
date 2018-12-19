@@ -208,6 +208,8 @@ nav.navbar {
       .team.container .tabs .tab.active {
         opacity: 1;
         border-bottom: #C2C0BC solid 1px; }
+    .team.container .tabs .tab:focus, .team.container .tabs .tab:hover {
+      opacity: 1; }
   .team.container ul {
     list-style-type: none;
     margin: 0;
@@ -241,7 +243,7 @@ nav.navbar {
       text-transform: uppercase;
       color: #53656F;
       background: #C2C0BC; }
-    .team.container .person button:hover {
+    .team.container .person button:hover, .team.container .person button:focus {
       color: #C2C0BC;
       background: #53656F; }
   .team.container #modal-content {
@@ -385,14 +387,17 @@ nav.navbar {
   top: 35px;
   right: 15px;
   color: #53656F;
+  border: none;
   font-size: 40px;
   font-weight: 100;
-  transition: 0.3s; }
+  transition: 0.3s;
+  background-color: transparent; }
 
 .close:hover,
 .close:focus {
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: transparent; }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {

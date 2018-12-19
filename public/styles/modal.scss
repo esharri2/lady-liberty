@@ -39,15 +39,19 @@
     top: 35px;
     right: 15px;
     color: $background;
+    border:none;
     font-size: 40px;
     font-weight: 100;
     transition: 0.3s;
+    background-color:transparent;
 }
 
 .close:hover,
 .close:focus {
     text-decoration: none;
     cursor: pointer;
+    background-color:transparent;
+
 }
 
 /* 100% Image Width on Smaller Screens */
