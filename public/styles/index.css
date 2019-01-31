@@ -203,12 +203,13 @@ nav.navbar {
     justify-content: space-evenly; }
     .team.container .tabs .tab {
       margin: 0 20px;
-      opacity: .5;
+      opacity: 0.5;
       cursor: pointer; }
       .team.container .tabs .tab.active {
         opacity: 1;
         border-bottom: #C2C0BC solid 1px; }
-    .team.container .tabs .tab:focus, .team.container .tabs .tab:hover {
+    .team.container .tabs .tab:focus,
+    .team.container .tabs .tab:hover {
       opacity: 1; }
   .team.container ul {
     list-style-type: none;
@@ -226,7 +227,7 @@ nav.navbar {
     display: none; }
   .team.container .person {
     margin: 20px auto 35px auto;
-    transition: all .2s; }
+    transition: all 0.2s; }
     .team.container .person .name {
       font-family: "Work Sans", Arial, sans-serif;
       text-transform: uppercase;
@@ -243,14 +244,17 @@ nav.navbar {
       text-transform: uppercase;
       color: #53656F;
       background: #C2C0BC; }
-    .team.container .person button:hover, .team.container .person button:focus {
+    .team.container .person button:hover,
+    .team.container .person button:focus {
       color: #C2C0BC;
       background: #53656F; }
   .team.container #modal-content {
-    padding: 0 20px;
+    padding: 20px 20px 0 20px;
     max-width: 800px;
-    height: 80vh;
-    text-align: left; }
+    text-align: left;
+    background-color: darkgray;
+    /* Fallback color */
+    position: relative; }
     .team.container #modal-content .person {
       color: black;
       width: 100%;
@@ -357,7 +361,6 @@ nav.navbar {
   /* Hidden by default */
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: fixed;
   /* Stay in place */
   z-index: 2000;
@@ -368,24 +371,24 @@ nav.navbar {
   right: 0;
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: darkgray;
-  /* Fallback color */
-  background-color: rgba(169, 169, 169, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   /* Black w/ opacity */
-  animation: fadeIn .2s 1; }
+  animation: fadeIn 0.2s 1; }
 
 /* Modal Content (Image) */
 .modal-content {
   display: block;
   width: 80%;
   max-width: 800px;
-  animation: fadeIn 1s 1; }
+  animation: fadeIn 1s 1;
+  z-index: 2001;
+  margin-top: 50px; }
 
 /* The Close Button */
 .close {
   position: absolute;
-  top: 35px;
-  right: 15px;
+  top: -20px;
+  right: 5px;
   color: #53656F;
   border: none;
   font-size: 40px;
@@ -401,6 +404,8 @@ nav.navbar {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
+  .modal {
+    align-items: start; }
   .modal-content {
     width: 100%; } }
 
