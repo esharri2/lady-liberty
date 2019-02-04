@@ -65,3 +65,9 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-height: 650px) {
+  .modal {
+    align-items: start;
+  }
+}

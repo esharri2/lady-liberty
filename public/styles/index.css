@@ -409,6 +409,10 @@ nav.navbar {
   .modal-content {
     width: 100%; } }
 
+@media only screen and (max-height: 650px) {
+  .modal {
+    align-items: start; } }
+
 nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
 .contact a:focus .iconLabel,
 .contact a:hover i,
