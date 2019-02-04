@@ -23,7 +23,6 @@ module.exports = function(req, res) {
           person.showMoreButton = true;
         }
       });
-      console.log(sortedTeam);
       locals.everyone = sortedTeam;
       next(err);
     });

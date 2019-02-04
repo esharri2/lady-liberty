@@ -341,6 +341,12 @@ nav.navbar {
       cursor: pointer; }
     .images.container .column img:hover {
       opacity: 0.8; }
+  .images.container .modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */ }
+    .images.container .modal .close {
+      top: 20px;
+      right: 20px; }
 
 @media screen and (max-width: 675px) {
   .images.container .column {
