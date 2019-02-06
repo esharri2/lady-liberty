@@ -1,33 +1,33 @@
 .contacts {
-    display: flex;
-    flex-direction: column;
-    min-height: 60vh; // align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh; // align-items: center;
+  justify-content: center;
 }
 
 .contact {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  color: $bg-contrast-1;
+  font-size: 1em;
+  a {
+    display: block;
+    text-decoration: none;
+    transition: all 0.1s;
+  }
+  a:hover .iconLabel,
+  a:focus .iconLabel,
+  a:hover i,
+  a:focus i {
+    @extend %link-hover;
+  }
+  i {
     color: $bg-contrast-1;
-    font-size: 25px;    
-    a {
-        display: block;
-        text-decoration: none;
-        transition: all .1s;
-    }
-    a:hover .iconLabel,
-    a:focus .iconLabel,
-    a:hover i,
-    a:focus i {
-        @extend %link-hover;
-    }
-    i {
-        color: $bg-contrast-1;
-    }
-    .iconLabel {
-        text-decoration: none; // text-transform: uppercase;
-        color: $bg-contrast-1; // font-family: $title-font;
-        display: inline;
-        margin-left: 10px;
-        text-transform: uppercase;
-    }
+  }
+  .iconLabel {
+    text-decoration: none; // text-transform: uppercase;
+    color: $bg-contrast-1; // font-family: $title-font;
+    display: inline;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
 }
