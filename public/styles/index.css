@@ -175,11 +175,11 @@ nav.navbar {
 .contact {
   margin-bottom: 30px;
   color: #C2C0BC;
-  font-size: 25px; }
+  font-size: 1em; }
   .contact a {
     display: block;
     text-decoration: none;
-    transition: all .1s; }
+    transition: all 0.1s; }
   .contact i {
     color: #C2C0BC; }
   .contact .iconLabel {
