@@ -26,11 +26,21 @@
       right: 20px;
     }
   }
-}
 
-@media screen and (max-width: 675px) {
-  .images.container .column {
-    flex: 100%;
-    max-width: 100%;
+  @media only screen and (max-width: 700px) {
+    .modal {
+      align-items: center;
+    }
+    .modal-content {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 675px) {
+    .images.container .column {
+      flex: 100%;
+      max-width: 100%;
+    }
   }
 }

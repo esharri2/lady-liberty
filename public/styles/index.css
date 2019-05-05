@@ -347,11 +347,16 @@ nav.navbar {
     .images.container .modal .close {
       top: 20px;
       right: 20px; }
-
-@media screen and (max-width: 675px) {
-  .images.container .column {
-    flex: 100%;
-    max-width: 100%; } }
+  @media only screen and (max-width: 700px) {
+    .images.container .modal {
+      align-items: center; }
+    .images.container .modal-content {
+      width: 100%;
+      margin-top: 0; } }
+  @media screen and (max-width: 675px) {
+    .images.container .images.container .column {
+      flex: 100%;
+      max-width: 100%; } }
 
 #myImg {
   border-radius: 5px;
