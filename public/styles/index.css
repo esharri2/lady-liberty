@@ -41,8 +41,8 @@ table {
   border-spacing: 0; }
 
 body {
-  background-color: #53656F;
-  color: #C2C0BC;
+  background-color: #53656f;
+  color: #c2c0bc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@ body {
     padding: 0 5px;
     font-weight: 300;
     text-align: center;
-    color: #C2C0BC;
+    color: #c2c0bc;
     font-family: "Crimson Text", serif;
     position: relative; }
   .splash .subtitle {
@@ -79,14 +79,14 @@ body {
   .splash .link-button {
     margin: 30px;
     padding: 10px;
-    border: solid 1px #C2C0BC;
+    border: solid 1px #c2c0bc;
     font-family: "Work Sans", Arial, sans-serif;
     text-transform: uppercase;
     transition: all .5s;
     animation: rampFadeIn 4s 1; }
   .splash .link-button:hover {
-    color: #53656F;
-    background: #C2C0BC; }
+    color: #53656f;
+    background: #c2c0bc; }
 
 .background-img-wrap, .filter {
   position: fixed;
@@ -104,7 +104,7 @@ body {
   animation: fadeIn 2s 1; }
 
 .filter {
-  background-color: #53656F;
+  background-color: #53656f;
   opacity: .4;
   z-index: -1; }
 
@@ -116,11 +116,11 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2em;
+  height: 3em;
   background-color: inherit;
   z-index: 10; }
   nav.navbar .hamburger {
-    color: #C2C0BC; }
+    color: #c2c0bc; }
   nav.navbar .hamburger:hover {
     cursor: pointer;
     color: #999999; }
@@ -131,7 +131,7 @@ nav.navbar {
     padding: 0; }
   nav.navbar a {
     text-decoration: none;
-    color: #C2C0BC; }
+    color: #c2c0bc; }
   nav.navbar .links {
     display: flex;
     transition: all 1s ease-out; }
@@ -141,10 +141,10 @@ nav.navbar {
   nav.navbar .expanded.links {
     display: block;
     position: absolute;
-    top: 2em;
+    top: 3em;
     padding: 0;
     margin: 0;
-    background-color: #53656F;
+    background-color: #53656f;
     width: 100vw;
     border-bottom: 1px solid #999999;
     animation: fadeIn 0.3s 1; }
@@ -174,17 +174,17 @@ nav.navbar {
 
 .contact {
   margin-bottom: 30px;
-  color: #C2C0BC;
+  color: #c2c0bc;
   font-size: 1em; }
   .contact a {
     display: block;
     text-decoration: none;
     transition: all 0.1s; }
   .contact i {
-    color: #C2C0BC; }
+    color: #c2c0bc; }
   .contact .iconLabel {
     text-decoration: none;
-    color: #C2C0BC;
+    color: #c2c0bc;
     display: inline;
     margin-left: 10px;
     text-transform: uppercase; }
@@ -207,7 +207,7 @@ nav.navbar {
       cursor: pointer; }
       .team.container .tabs .tab.active {
         opacity: 1;
-        border-bottom: #C2C0BC solid 1px; }
+        border-bottom: #c2c0bc solid 1px; }
     .team.container .tabs .tab:focus,
     .team.container .tabs .tab:hover {
       opacity: 1; }
@@ -233,7 +233,7 @@ nav.navbar {
       text-transform: uppercase;
       margin: 0; }
       .team.container .person .name a {
-        border-bottom: 0.5px solid #C2C0BC; }
+        border-bottom: 0.5px solid #c2c0bc; }
     .team.container .person .role {
       font-family: "Crimson Text", serif;
       font-style: italic;
@@ -242,12 +242,12 @@ nav.navbar {
       padding: 3px 6px;
       font-family: "Work Sans", Arial, sans-serif;
       text-transform: uppercase;
-      color: #53656F;
-      background: #C2C0BC; }
+      color: #53656f;
+      background: #c2c0bc; }
     .team.container .person button:hover,
     .team.container .person button:focus {
-      color: #C2C0BC;
-      background: #53656F; }
+      color: #c2c0bc;
+      background: #53656f; }
   .team.container #modal-content {
     padding: 20px 20px 0 20px;
     max-width: 800px;
@@ -260,7 +260,7 @@ nav.navbar {
       width: 100%;
       display: block; }
       .team.container #modal-content .person a {
-        color: #53656F;
+        color: #53656f;
         text-decoration: underline;
         font-family: "Crimson Text", serif; }
       .team.container #modal-content .person .showAbout {
@@ -395,7 +395,7 @@ nav.navbar {
   position: absolute;
   top: -20px;
   right: 5px;
-  color: #53656F;
+  color: #53656f;
   border: none;
   font-size: 40px;
   font-weight: 100;
@@ -448,7 +448,7 @@ nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
     opacity: 1; } }
 
 .container {
-  margin-top: 6em;
+  margin-top: 9em;
   max-width: 600px;
   padding: 0 10px;
   animation: fadeIn 1s 1; }
@@ -459,16 +459,16 @@ nav.navbar .active, nav.navbar .links .link:hover, .contact a:hover .iconLabel,
     margin-bottom: 40px; }
 
 button {
-  border: solid 0.5px #C2C0BC;
+  border: solid 0.5px #c2c0bc;
   background: transparent;
-  color: #C2C0BC;
+  color: #c2c0bc;
   padding: 8px;
   margin-top: 10px;
-  transition: all .1s; }
+  transition: all 0.1s; }
 
 a {
   text-decoration: none;
-  color: #C2C0BC; }
+  color: #c2c0bc; }
 
 button:focus,
 button:hover {

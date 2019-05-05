@@ -11,6 +11,7 @@ module.exports = function(req, res) {
   view.on("init", function(next) {
     var q = Person.model.find().populate("category");
     q.exec(function(err, results) {
+      results = results || [];
       const sortedTeam = results.sort((a, b) => {
         if (a.order > b.order) {
           return 1;

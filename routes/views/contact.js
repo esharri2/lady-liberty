@@ -12,6 +12,7 @@ module.exports = function(req, res) {
   view.on("init", function(next) {
     var q = Contact.model.find();
     q.exec(function(err, results) {
+      results = results || [];
       results.forEach(res => {
         let iconName;
         const platform = res.platform.toLowerCase();
